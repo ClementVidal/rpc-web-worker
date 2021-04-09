@@ -1,0 +1,16 @@
+{
+  "name": "rpc-web-worker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup src/main.js --file public/main.js --format iife && rollup src/worker.js --file public/worker.js --format iife",
+    "start": "npm run build && http-server ./public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "rollup": "^2.45.0"
+  }
+}
